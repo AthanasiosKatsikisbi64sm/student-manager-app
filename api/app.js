@@ -22,7 +22,8 @@ db.serialize(() => {
 
 
 const importCSV = () => {
-    const students = [];
+    db.run('DELETE FROM students');
+    const students = []; 
     fs.createReadStream('./Students.csv')
         .pipe(csvParser())
         .on('data', (row) => {
