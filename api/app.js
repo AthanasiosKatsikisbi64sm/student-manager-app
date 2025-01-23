@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 var csvParser = require('csv-parser');
 var fs = require('fs');
 var cors = require('cors');
-app.use(cors());
+
 
 var app = express();
 
@@ -13,6 +13,7 @@ const db = new sqlite3.Database('./students.db');
 
 app.use(bodyParser.json());
 app.use(express.static('client'));
+app.use(cors());
 
 db.serialize(() => {
     db.run(`CREATE TABLE IF NOT EXISTS students (
