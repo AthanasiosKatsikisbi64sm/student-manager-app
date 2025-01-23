@@ -2,7 +2,9 @@ var express = require('express');
 var sqlite3 = require('sqlite3').verbose();
 var bodyParser = require('body-parser');
 var csvParser = require('csv-parser');
-const fs = require('fs');
+var fs = require('fs');
+var cors = require('cors');
+app.use(cors());
 
 var app = express();
 
