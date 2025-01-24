@@ -6,7 +6,7 @@ const genderInput = document.getElementById('gender');
 
 
 const fetchStudents = async () => {
-    const response = await fetch('/students');
+    const response = await fetch('http://localhost:3000/students');
     const students = await response.json();
     studentList.innerHTML = ''; 
     students.forEach((student) => {
