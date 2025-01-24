@@ -23,7 +23,7 @@ addStudentForm.addEventListener('submit', async (e) => {
     const age = parseInt(ageInput.value, 10);
     const gender = genderInput.value;
     
-    const response = await fetch('/students', {
+    const response = await fetch('http://localhost:3000/students', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
