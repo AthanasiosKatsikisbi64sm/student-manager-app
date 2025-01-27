@@ -10,12 +10,36 @@ const fetchStudents = async () => {
     const students = await response.json();
     studentList.innerHTML = ''; 
     students.forEach((student) => {
-        const li = document.createElement('li');
+        let li = document.createElement('li');
         li.textContent = `${student.name}, ${student.age} years old, ${student.gender}`;
+        studentList.appendChild(li);
+
+
+
+        let deleteBtn = document.createElement('button');
+        deleteBtn.textContent = 'Delete';
+        deleteBtn.style.marginLeft = '10px';
+        deleteBtn.onclick = () => deleteStudent(student.id);
+
+        li.appendChild(deleteBtn);
         studentList.appendChild(li);
     });
 };
 
+
+
+const deleteStudent = async (id) => {
+    const response = await fetch(`http://localhost:3000/students/${id}`, {
+        method: 'DELETE',
+    });
+
+    if (response.ok) {
+        console.log(`Student with ID ${id} deleted`);
+        fetchStudents(); 
+    } else {
+        console.error('Failed to delete student');
+    }
+};
 
 addStudentForm.addEventListener('submit', async (e) => {
     e.preventDefault();
