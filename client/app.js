@@ -19,6 +19,8 @@ const fetchStudents = async () => {
         let deleteBtn = document.createElement('button');
         deleteBtn.textContent = 'Delete';
         deleteBtn.style.marginLeft = '10px';
+        deleteBtn.style.backgroundColor = 'Red';
+        deleteBtn.style.padding = '10px 15px';
         deleteBtn.onclick = () => deleteStudent(student.id);
 
         li.appendChild(deleteBtn);
