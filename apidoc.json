@@ -1,0 +1,10 @@
+{
+  "name": "Student Manager API",
+  "version": "1.2.0",
+  "description": "API documentation for the Student Manager App",
+  "title": "Student Manager API Docs",
+  "url": "http://localhost:3000",
+  "template": {
+    "forceLanguage": "en"
+  }
+}
