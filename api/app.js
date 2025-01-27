@@ -14,6 +14,8 @@ const db = new sqlite3.Database('./students.db');
 app.use(bodyParser.json());
 app.use(express.static('client'));
 app.use(cors());
+app.use('/docs', express.static('api'));
+
 
 db.serialize(() => {
     db.run(`CREATE TABLE IF NOT EXISTS students (
