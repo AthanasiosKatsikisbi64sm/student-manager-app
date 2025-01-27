@@ -3,6 +3,11 @@ body {
     margin: 20px;
 }
 
+img {
+    height: 10px;
+    width: 10px;
+}
+
 h1 {
     color: #333;
 }
