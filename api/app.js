@@ -52,13 +52,51 @@ const importCSV = () => {
 importCSV();
 
 
+
+/**
+ * @api {get} /students Display all Students
+ * @apiVersion 1.2.0
+ * @apiGroup STUDENTS
+ * @apiSuccess {Object[]} students List of students.
+ * @apiSuccess {Number} students.id Student ID.
+ * @apiSuccess {String} students.name Student Name.
+ * @apiSuccess {Number} students.age Student Age.
+ * @apiSuccess {String} students.gender Student Gender.
+ * @apiSuccessExample {json} Success
+ *    HTTP/1.1 200 OK
+ *    {
+ *      "list": 0,
+ *      "id": "1001",
+ *      "name": "Maria",
+ *      "age": 17,
+ *      "gender": "Female"
+ *    }
+ * @apiErrorExample {json} List error
+ *    HTTP/1.1 500 Internal Server Error
+ */
 app.get('/students', (req, res) => {
     db.all('SELECT * FROM students', [], (err, rows) => {
         res.json(rows);
     });
 });
 
-
+/**
+ * @api {post} /Students/ Add A New Student
+ * @apiVersion 1.2.0
+ * @apiGroup STUDENTS
+ *  @apiSuccess {String} students.name Student Name.
+ * @apiSuccess {Number} students.age Student Age.
+ * @apiSuccess {String} students.gender Student Gender.
+ *
+ * @apiParamExample {json} Input
+ *    {
+ *      "name": "Maria",
+ *      "age": 17,
+ *      "gender": "Female"
+ *    }
+ * @apiSuccessExample Success-Response:
+ *     HTTP/1.1 200 OK
+ */
 app.post('/students', (req, res) => {
     let { name, age, gender } = req.body;
     db.run('INSERT INTO students (name, age, gender) VALUES (?, ?, ?)', [name, age, gender], function () {
@@ -67,7 +105,16 @@ app.post('/students', (req, res) => {
 });
 
 
-
+/**
+ * @api {delete} /students/:id Delete A Student
+ * @apiVersion 1.2.0
+ * @apiGroup STUDENTS
+ * 
+ * @apiParam {id} id Student Identifier
+ * 
+ * @apiSuccessExample Success-Response:
+ *     HTTP/1.1 200 OK
+ */
 app.delete('/students/:id', (req, res) => {
     let { id } = req.params;
     db.run('DELETE FROM students WHERE id = ?', [id], function () {

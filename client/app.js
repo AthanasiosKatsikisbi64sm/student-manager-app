@@ -45,9 +45,9 @@ const deleteStudent = async (id) => {
 
 addStudentForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const name = nameInput.value;
-    const age = parseInt(ageInput.value, 10);
-    const gender = genderInput.value;
+    let name = nameInput.value;
+    let age = parseInt(ageInput.value, 10);
+    let gender = genderInput.value;
     
     const response = await fetch('http://localhost:3000/students', {
         method: 'POST',
