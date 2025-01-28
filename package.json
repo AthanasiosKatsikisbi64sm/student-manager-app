@@ -1,5 +1,8 @@
 {
   "devDependencies": {
-    "apidoc": "^1.2.0"
-  }
+    "apidoc": "^1.2.0",
+    "testcafe": "^3.7.1"
+  },
+"scripts": {
+    "test": "testcafe chromium testcafe.js"}
 }
