@@ -1,7 +1,8 @@
 import { Selector } from 'testcafe';
 
 fixture('Student Manager App Client Side Test')
-    //Change the File to your directory
+    //Change the File to your directory path
+    //Example:.page('file:///YourPath/StudentManagerApp/client/index.html'); 
     .page('file:///home/athanasioskatsikisbi64sm/Desktop/repos/StudentManagerApp/client/index.html');
 
 
