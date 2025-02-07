@@ -1,7 +1,8 @@
 import { Selector } from 'testcafe';
 
 fixture('Student Manager App Client Side Test')
-    .page('file:///home/athanasioskatsikisbi64sm/Desktop/repos/StudentManagerApp/client/index.html');  // Ensure your app is running
+    //Change the File to your directory
+    .page('file:///home/athanasioskatsikisbi64sm/Desktop/repos/StudentManagerApp/client/index.html');
 
 
 test('Client Can Add A Student And See It At The Bottom Of The List', async (t) => {
