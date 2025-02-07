@@ -37,10 +37,7 @@ const deleteStudent = async (id) => {
 
     if (response.ok) {
         console.log(`Student with ID ${id} deleted`);
-        fetchStudents(); 
-    } else {
-        console.error('Failed to delete student');
-    }
+        fetchStudents(); }
 };
 
 addStudentForm.addEventListener('submit', async (e) => {

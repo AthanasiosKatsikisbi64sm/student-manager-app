@@ -127,5 +127,5 @@ app.delete('/students/:id', (req, res) => {
 
 let PORT = 3000;
 app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
+    console.log(`Server running on http://localhost:${PORT}/students`);
 });

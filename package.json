@@ -4,5 +4,7 @@
     "testcafe": "^3.7.1"
   },
 "scripts": {
-    "test": "testcafe chromium testcafe.js"}
+    "test": "testcafe chromium testcafe.js",
+    "docs": "apidoc -i . -o apidoc"
+  }
 }
