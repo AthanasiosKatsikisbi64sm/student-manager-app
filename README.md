@@ -14,7 +14,7 @@ Ensure you have the following installed on your system:
 
 ## Setup Instructions  
 
-### 1. API Setup  
+### 1. API  
 Follow these steps to install and run the API server:  
 ```sh
 # Open terminal and navigate to the project root directory
@@ -34,6 +34,7 @@ node app.js
 
 
 
+### 2. CLIENT
 
 # Open a new terminal window
 # Navigate to the project root directory
@@ -58,7 +59,7 @@ firefox index.html
 
 
 
-
+### 3. APIDOC
 
 # Open a new terminal window
 cd student-management-app  
@@ -75,7 +76,7 @@ chromium index.html
 firefox index.html
 
 
-
+### 4. TESTS
 
 # Open a new terminal window
 cd student-management-app  
