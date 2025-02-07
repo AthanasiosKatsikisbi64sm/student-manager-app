@@ -61,7 +61,7 @@ firefox index.html
 cd student-management-app  
 
 # Generate API Documentation
-npm run doc  
+npm run docs  
 
 # Change directory to the API Documentation folder
 cd apidoc  
