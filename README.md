@@ -79,3 +79,9 @@ cd student-management-app
 
 # Run Tests
 npm run test
+
+
+
+### 5. TestCafe File Path
+Change the testcafe.js path in the .page('file:///YourPath/StudentManagerApp/client/index.html') method to your own path
+
