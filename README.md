@@ -1,50 +1,50 @@
 # Student Management App  
 
-This project is a **Student Management Application** with an API, client-side application, and API documentation. Follow the steps below to set up and run the project.
+This Project is a **Student Management Application** with an API, Client Side Application, and API Documentation. Follow the steps below to set up and run the Project.
 
 ---
 
 ## Prerequisites  
-Ensure you have the following installed on your system:  
-- **Node.js** (latest LTS version recommended)  
+Ensure you have the following installed on your System:  
+- **Node.js** (Latest LTS version recommended)  
 - **npm** (Node Package Manager)  
-- **Chromium** or **Firefox** (for viewing client and documentation)  
+- **Chromium** or **Firefox** (For viewing Client and Documentation)  
 
 ---
 
 ## Setup Instructions  
 
  
-Follow these steps to install and run the API server:  
+Follow these steps to install and run the API Server:  
 ```sh
 ### 1. API 
-# Open terminal and navigate to the project root directory
+# Open Terminal and navigate to the Project root directory
 cd student-management-app  
 
-# Install dependencies
+# Install Dependencies
 npm install  
 
 # Change directory to the API folder
 cd api  
 
-# Install API dependencies
+# Install API Dependencies
 npm install  
 
-# Start the server
+# Start the Server
 node app.js
 
 
 
 ### 2. CLIENT
 
-# Open a new terminal window
-# Navigate to the project root directory
+# Open a new Terminal Window
+# Navigate to the Project root directory
 cd student-management-app  
 
-# Change directory to the client folder
+# Change Directory to the Client folder
 cd client  
 
-# Install client dependencies
+# Install Client Dependencies
 npm install  
 
 # Open the index.html file in Chromium or Firefox
@@ -57,16 +57,16 @@ firefox index.html
 
 ### 3. APIDOC
 
-# Open a new terminal window
+# Open a New Terminal Window
 cd student-management-app  
 
-# Generate API documentation
+# Generate API Documentation
 npm run doc  
 
-# Change directory to the API documentation folder
+# Change directory to the API Documentation folder
 cd apidoc  
 
-# Open the documentation in a browser
+# Open the Documentation in a Browser
 chromium index.html  
 # or
 firefox index.html
@@ -74,8 +74,8 @@ firefox index.html
 
 ### 4. TESTS
 
-# Open a new terminal window
+# Open a New Terminal Window
 cd student-management-app  
 
-# Run tests
+# Run Tests
 npm run test
