@@ -15,8 +15,7 @@ Ensure you have the following installed on your system:
 ## Setup Instructions  
 
 ### 1. API  
-Follow these steps to install and run the API server:  
-```sh
+
 # Open terminal and navigate to the project root directory
 cd student-management-app  
 
